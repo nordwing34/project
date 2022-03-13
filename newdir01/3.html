@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+<script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=4lWTrmldHMdJ76dbCgWUeXdxsZU12fOdZW4mdWjUl9FClgvukVLUjNLyK3eASv7EXd07HvJn2WjtKm8i68p_y7CWa9eeQ6v9mugeIdBa_InFSe6KXoQ5VuUg8XwSNxVgbYUamejOPiipn5CsDqU5KSEh3mXYRzqUPv16h5dfiS1zd0pfAFEuatGFK2fZWqzvyGDfwpZ31deFy6cJnJ5A7mncGX-9y5orWpcNpLlE9gN6J_eAHbd9DtEZC_AkIYPVxeJpH7U6PbB5JreZozOXEufVmiNxG91NY_iIBsnC-6U5Goo5G8hXZhphnKsMfHg_ZY2dYbS9o0Eiva3AIqenpjCIOCd1Ed68Jzrk66jYgyajbop79xmpDkL1CsZJA5foRY2uKTneAaX67EFWLYfv4WEt3386ub-gBIvFK1ZdF575nbRyoj17yceiny9osatZXL1oNEhOzc_oXOB-_4M7lQhxNPB76AGwxNm95O-QM0IqJV8sLtFE9XWLcFrCQ3YOryDxucO6QQEV1OrbhJ6dWDtbuuzZIgoHN202Uotz8EYUkb0Phgel2XEaaJSRycBdRj0xBxEZCs9b__4oRe_WGMTxX6K0p4XHcBBEktFYZ-UHfBqnCy2t-zqbZ8gtnnnv4Ym0GJ9wh1zGX9FjxxYw5Y6o7CGKBTl5I0zYw035GvygkdQl5QuLOWx5YyvThoN3N2XF9iaWzW3rj3q2B1q-oANeMxtQdpNDd1qmLYU1rIDO-YHkMc2wutEL7L1vYWV-6A_rJaT5rctZdm1DFHOPL7y9ZXAaiQ0VyqQeXaD7_Vp7WifVOfeQJQbuXjDJYX8339NNJsso_u9E_41RhT6bf8M3aYptiI838WVvA1GbJq8Eynt-KuSyN6IUyDlHiZAduamUbAIR-DL1os47ZrE8uwZMnvq2zt8QYNp4uMrMcmYeLMCk3N2uHVjv4kZefiRa0gfNLONUdVWRiTHwyAJumZEVKM9Vme8WcTMky6tl7DYlLOM7Ev--hQ5mTfTkgYRK0Z-gPiofB5z9g3mQMcRXfUfC-2XLNWvOYqQeFPLImiklY86l1v2gTDOyA1o35zDUcjBXGtlWm14WvIM-Rv8qisYkRwoWwuhlJRGI_GJ7oF4ceIU6HVNQ7UmJ4vPW3h2HIRZJ8RR1r0cmxU4SsepIFo07bFXzU0MY5QzKKWYuR3w" charset="UTF-8"></script></head>
+<body>
+<!--
+Обязательное задание.
+
+Выполнить все задачи в теге script. Комментарии, в которых написаны задачи, не
+стирать, код с решением задачи пишем под комментарием.
+-->
+
+<p class="super_element">Привет</p>
+
+<img src="https://placeimg.com/50/50/animals" alt="">
+<img src="https://placeimg.com/50/50/arch" alt="">
+<img src="https://placeimg.com/50/50/nature" alt="">
+<img src="https://placeimg.com/50/50/people" alt="">
+<img src="https://placeimg.com/50/50/tech" alt="">
+<img src="https://placeimg.com/50/50/tech/grayscale" alt="">
+<img src="https://placeimg.com/50/50/tech/sepia" alt="">
+
+<br>
+
+<button>Кнопка</button>
+<button class="super_element">Кнопка с классом btn</button>
+<button>Кнопка</button>
+
+<br>
+
+<textarea></textarea>
+
+<br>
+
+<ul>
+  <li>
+    <button>Кнопка 1</button>
+  </li>
+  <li>
+    <button>Кнопка 2</button>
+  </li>
+  <li>
+    <button>Кнопка 3</button>
+  </li>
+  <li>
+    <button>Кнопка 4</button>
+  </li>
+</ul>
+
+<script>
+  "use strict";
+
+  /*
+  1. Необходимо вывести сообщение в консоль "все теги прогрузились", когда все
+  теги будут созданы браузером.
+  */
+  function pageLoaded(){
+    console.log("Теги загрузились");
+  }
+  document.addEventListener("DOMContentLoaded", pageLoaded);
+
+  /*
+  2. Необходимо вывести сообщение в консоль "страница загрузилась", когда все
+  ресурсы страницы будут загружены.
+  */
+  window.onload = function(){
+    console.log("Страница загрузилась");
+  }
+
+  /*
+  3. При клике на какой-либо тег на странице в консоль должно выводиться
+  сообщение наподобии:
+  Класс "super_element" присутствует в элементе "div".
+  сообщение должно определять присутствует или отсутвтует класс "super_element"
+  у элемента, а также выводить в нижнем регистре верный тег в данной строке, по
+  которому был совершен клик.
+  Необходимо использовать делегирование.
+  */
+  document.body.addEventListener("click", function(event){
+    if (event.srcElement.classList.contains("super_element") ) {
+      console.log("Класс 'super_element' присутствует в элементе " + event.target.tagName.toLowerCase() );
+    }
+  });
+
+
+  /*
+  4. Сделайте, чтобы при наведении на textarea в консоли появлялось сообщение:
+  "Вы навели на textarea."
+   */
+   const elemTextarea = document.querySelector("textarea");
+   elemTextarea.addEventListener("mouseover", function(event){
+    console.log("Вы навели на textarea");
+   });
+
+
+  /*
+  5. Необходимо повесить событие клика на тег ul. В обработчике события в
+  консоль необходимо выводить текст, который записан внутри элемента кнопки,
+  по которой был произведен клик.
+  Если клик был не по кнопке, то ничего выводить не нужно.
+  Необходимо использовать делегирование.
+   */
+   const tagUl = document.querySelector("ul");
+   tagUl.addEventListener("click", function(event){
+    console.log(event.target.innerText);
+   });
+
+
+  /*
+  6. Вопрос: Почему в console.log пишется сначала текст из 5 задания и только
+  потом выводится текст из 3 задания, если мы кликаем по кнопкам в ul?
+  Ответ необходимо написать здесь же, под этим комментарием, своими словами.
+  */
+
+  /**
+   * А у меня 5 задание выводится где надо - после 4! Что я сделал не так?
+  */
+
+  /*
+  7. С помощью JS необходимо изменить цвет заднего фона каждого второго тега li.
+   */
+   const elemLi = document.querySelectorAll("li:nth-child(even)");
+   elemLi.forEach(function(item) {
+    item.style.backgroundColor = '#a4f587';
+   });
+
+
+</script>
+</body>
+</html>
